@@ -11,6 +11,9 @@
   <li>If prompted, enter your OpenAI API key and press Enter. (will be asked only the first time)</li>
 </ol>
 <p>Once you've completed these steps, a window will open on the right side of the screen, showing you the translated query in English. You can also see a shorter explanation (tldr) of the query below the full explanation.</p>
+
+<img width="1590" alt="Screenshot 2023-02-26 at 00 50 22" src="https://user-images.githubusercontent.com/92080844/221384900-af5cc216-585e-4705-88b4-47ee4738565d.png">
+
 <h2>Contributing</h2>
 <p>If you encounter any bugs or have suggestions for new features, please feel free to open an issue or submit a pull request on GitHub. Contributions are always welcome!</p>
 <h2>License</h2>
