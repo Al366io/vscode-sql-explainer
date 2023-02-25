@@ -31,10 +31,8 @@ const parser = new Parser();
 const isSqlQueryValid = (sqlQuery: string) => {
   try {
     parser.parse(sqlQuery);
-    console.log('SQL query is valid');
     return true;
   } catch (error) {
-    console.log('SQL query is invalid');
     return false;
   }
 };

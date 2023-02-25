@@ -14,7 +14,7 @@
     "commands": [
       {
         "command": "vscode-sql-translate.SQLTranslator",
-        "title": "SQL Translator"
+        "title": "SQL Explainer: Translate Query"
       }
     ]
   },

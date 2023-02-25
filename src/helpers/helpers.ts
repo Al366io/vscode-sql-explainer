@@ -11,7 +11,6 @@ export async function getApiKey(context: vscode.ExtensionContext) {
 
   // If the API key is not stored, prompt the user to enter it
   if (!OpenAiApiKey) {
-    console.log('No API key found');
     OpenAiApiKey = await vscode.window
       .showInputBox({ prompt: 'Enter your OPENAI API key' })
       .then((value) => {
@@ -19,7 +18,7 @@ export async function getApiKey(context: vscode.ExtensionContext) {
       });
 
     // uncomment the line below to store the API key in globalState. It's commented for development purposes.
-    // context.globalState.update('OpenAiApiKey', OpenAiApiKey);
+    context.globalState.update('OpenAiApiKey', OpenAiApiKey);
   }
   return OpenAiApiKey;
 }

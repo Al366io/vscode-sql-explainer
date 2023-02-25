@@ -45,11 +45,9 @@ const parser = new node_sql_parser_1.Parser();
 const isSqlQueryValid = (sqlQuery) => {
     try {
         parser.parse(sqlQuery);
-        console.log('SQL query is valid');
         return true;
     }
     catch (error) {
-        console.log('SQL query is invalid');
         return false;
     }
 };
@@ -77,6 +75,7 @@ async function translateSQL(sqlQuery, OPENAI_KEY) {
             }),
         });
         const data = await response.json();
+        // if the response has "error" in it, it means the API key is invalid
         if (data.error) {
             return { fullTranslation: null, tldrTranslation: null, error: 'Invalid API key' };
         }
@@ -8815,18 +8814,13 @@ async function getApiKey(context) {
     let OpenAiApiKey = context.globalState.get('OpenAiApiKey');
     // If the API key is not stored, prompt the user to enter it
     if (!OpenAiApiKey) {
-        console.log('No API key found');
         OpenAiApiKey = await vscode.window
             .showInputBox({ prompt: 'Enter your OPENAI API key' })
             .then((value) => {
-            if (value) {
-                return value;
-            }
-            else
-                return undefined;
+            return value;
         });
         // uncomment the line below to store the API key in globalState. It's commented for development purposes.
-        // context.globalState.update('OpenAiApiKey', OpenAiApiKey);
+        context.globalState.update('OpenAiApiKey', OpenAiApiKey);
     }
     return OpenAiApiKey;
 }
@@ -9010,7 +9004,7 @@ const helpers_1 = __webpack_require__(39);
 let panel;
 // This method is called when the extension is activated
 function activate(context) {
-    context.globalState.update('OpenAiApiKey', undefined);
+    // context.globalState.update('OpenAiApiKey', undefined);
     // load pages from the views folder
     const { loadingHtmlContent, errorHtmlContent, noKeyHtmlContent } = (0, helpers_1.loadPages)(context);
     let disposable = vscode.commands.registerCommand('vscode-sql-translate.SQLTranslator', async () => {
@@ -9024,7 +9018,7 @@ function activate(context) {
             const selectedText = editor.document.getText(selection);
             // if the panel is not open, create it. Else just show it
             if (!panel) {
-                panel = vscode.window.createWebviewPanel('webviewPanel', 'SQL Translator', vscode.ViewColumn.Two, // set the view column to position the panel on the right
+                panel = vscode.window.createWebviewPanel('webviewPanel', 'SQL Explainer', vscode.ViewColumn.Two, // set the view column to position the panel on the right
                 {});
                 panel.onDidDispose(() => {
                     panel = undefined;
@@ -9060,7 +9054,7 @@ function activate(context) {
           </head>
           <body style="background-color: #1e1e1e" class="text-light">
             <header class="d-flex justify-content-center mt-6">
-              <h1>SQL Translator</h1>
+              <h1>SQL Explainer</h1>
             </header>
             <div class="container">
               <h2> Full Explanation: </h2>

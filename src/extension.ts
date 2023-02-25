@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (!panel) {
           panel = vscode.window.createWebviewPanel(
             'webviewPanel',
-            'SQL Translator',
+            'SQL Explainer',
             vscode.ViewColumn.Two, // set the view column to position the panel on the right
             {}
           );
@@ -75,7 +75,7 @@ export function activate(context: vscode.ExtensionContext) {
           </head>
           <body style="background-color: #1e1e1e" class="text-light">
             <header class="d-flex justify-content-center mt-6">
-              <h1>SQL Translator</h1>
+              <h1>SQL Explainer</h1>
             </header>
             <div class="container">
               <h2> Full Explanation: </h2>
