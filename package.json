@@ -3,7 +3,7 @@
   "displayName": "sql-explainer",
   "publisher": "al366io",
   "description": "Translates SQL Queries and explains them",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.75.0"
   },
