@@ -1,6 +1,7 @@
 {
-  "name": "vscode-sql-translate",
-  "displayName": "sql-translator",
+  "name": "vscode-sql-explainer",
+  "displayName": "sql-explainer",
+  "publisher": "al366io",
   "description": "Translates SQL Queries and explains them",
   "version": "0.0.1",
   "engines": {
@@ -9,11 +10,18 @@
   "categories": [
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:vscode-sql-explainer.SQLExplainer"
+  ],
   "main": "./dist/extension.js",
+  "icon": "images/icon.png",
+  "repository": {
+    "url": "https://github.com/Al366io/vscode-sql-explainer"
+  },
   "contributes": {
     "commands": [
       {
-        "command": "vscode-sql-translate.SQLTranslator",
+        "command": "vscode-sql-explainer.SQLTranslator",
         "title": "SQL Explainer: Translate Query"
       }
     ]
