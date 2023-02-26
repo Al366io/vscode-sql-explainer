@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
     loadPages(context);
 
   let disposable = vscode.commands.registerCommand(
-    'vscode-sql-translate.SQLTranslator',
+    'vscode-sql-explainer.SQLExplainer',
     async () => {
       // get the API key from the user's settings
       let OpenAiApiKey = await getApiKey(context);

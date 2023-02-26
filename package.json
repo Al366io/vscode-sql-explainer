@@ -21,7 +21,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-sql-explainer.SQLTranslator",
+        "command": "vscode-sql-explainer.SQLExplainer",
         "title": "SQL Explainer: Translate Query"
       }
     ]
