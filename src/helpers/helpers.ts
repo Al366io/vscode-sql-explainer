@@ -28,19 +28,19 @@ export function loadPages(context: vscode.ExtensionContext) {
   // get the paths to the html files
   const errorHtmlPath = path.join(
     context.extensionPath,
-    'src/views',
+    'dist/views',
     'error.html'
   );
 
   const loadingHtmlPath = path.join(
     context.extensionPath,
-    'src/views',
+    'dist/views',
     'loading.html'
   );
 
   const noKeyHtmlPath = path.join(
     context.extensionPath,
-    'src/views',
+    'dist/views',
     'noKey.html'
   );
 
