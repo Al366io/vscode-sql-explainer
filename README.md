@@ -1,7 +1,7 @@
 <h1>SQL Explainer</h1>
 <p>SQL Explainer is a VS Code extension that uses the OpenAI API to translate SQL queries into English. With this extension, you can quickly understand what a query does and why it's important without having to spend time deciphering SQL code.</p>
 <h2>Getting Started</h2>
-<p>To use SQL Explainer, you'll need to get an API key from OpenAI. If you don't have one already, you can sign up for a free account at <a href="https://openai.com/signup/">https://openai.com/signup/</a>.</p>
+<p>To use SQL Explainer, you'll need to get an API key from OpenAI. If you don't have one already, you can sign up for a free account at <a href="https://platform.openai.com/signup">https://platform.openai.com/signup</a>.</p>
 <p>Once you have an API key, you can install SQL Translator by following these steps:</p>
 <ol>
   <li>Install the extension</li>
