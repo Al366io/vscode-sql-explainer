@@ -7,7 +7,7 @@
   <li>Install the extension</li>
   <li>Open a file in VS Code and select the query you want to translate.</li>
   <li>Open the Command Palette by pressing <code>Ctrl+Shift+P</code> (Windows, Linux) or <code>Cmd+Shift+P</code> (macOS).</li>
-  <li>Type "SQL Translator" in the search bar and select the "SQL Translator: Translate Query" command.</li>
+  <li>Type "SQL Explainer" in the search bar and select the "SQL Explainer: Translate Query" command.</li>
   <li>If prompted, enter your OpenAI API key and press Enter. (will be asked only the first time)</li>
 </ol>
 <p>Once you've completed these steps, a window will open on the right side of the screen, showing you the translated query in English. You can also see a shorter explanation (tldr) of the query below the full explanation.</p>
